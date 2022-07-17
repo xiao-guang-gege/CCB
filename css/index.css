@@ -1,9 +1,9 @@
 .filter {
-  display: none;
+  /* display: none; */
   position: absolute;
   justify-content: center;
   align-items: center;
-  background-color: #1F2C53;
+  background-color: #0D3f96;
   width: 100vw;
   height: 100vh;
   /* z-index: 999; */
@@ -16,7 +16,7 @@
 }
 
 .main_con {
-  /* display: none; */
+  display: none;
   position: absolute;
   width: 97%;
   height: 95%;

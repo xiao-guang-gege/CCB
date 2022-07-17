@@ -14,19 +14,20 @@
 
 <body>
   <div id="particles-js" class="main">
-    <div id="filter" class="filter">
-      <button class="filter_controller">关闭遮罩</button>
+    <div class="filter">
+      <button id="filter" class="filter_controller">关闭遮罩</button>
     </div>
     <div id="main" class="main_con">
       <div class="main_top">
         <div class="main_top_left">
-          <div class="main_top_left_top">
+          <div class="main_top_left_top" id="goToClass1">
             <img src="./images/main_top_left.png" />
             <div class="main_top_left_top_title">XX公开数据展示</div>
             <div class="main_top_left_top_con">
               <div class="main_top_left_top_con_list">
                 <span class="main_top_left_c_l_n main_top_left_c_l_n1">0</span>
-                <p>党务公开</p>
+                <div>前往class1</div>
+
               </div>
               <div class="main_top_left_top_con_list">
                 <span class="main_top_left_c_l_n main_top_left_c_l_n2">0</span>
@@ -286,7 +287,22 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script>
   $(function() {
-    $('.filter_controller').click()
+
+    $('#filter').click(function() {
+      console.log('关闭关闭遮罩遮罩！！！！');
+      $('.filter').css('display', 'none');
+      $('#main').css('display', 'inline-block')
+    })
+
+    function goToClassOne() {
+      location.href = "/pages/class1.html";
+    }
+
+    $('#goToClass1').click(function() {
+      console.log('goToClass1被点击了！')
+      goToClassOne();
+    })
+
 
     function apiFn() {
       this.hostname = ""
